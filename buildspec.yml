@@ -14,13 +14,13 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      #- django-admin runserver 
+      - django-admin runserver 
   post_build:
     commands:
       - echo Build completed on `date`
-#      - python3 manage.py runserver 0.0.0.0:8000
+      - python manage.py runserver 0.0.0.0:8000
     finally:
-      - python3 manage.py test
+      - python manage.py test
       
 artifacts:
   files:
